@@ -30,6 +30,8 @@ public class RideService {
         ride.setUserId(user.getId());
         ride.setPickupLocation(request.getPickupLocation());
         ride.setDropLocation(request.getDropLocation());
+        ride.setFare(request.getFare());
+        ride.setDistanceKm(request.getDistanceKm());
         ride.setStatus("REQUESTED");
         return rideRepository.save(ride);
     }

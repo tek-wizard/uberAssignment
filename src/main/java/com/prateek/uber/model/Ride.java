@@ -1,4 +1,5 @@
 package com.prateek.uber.model;
+
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -13,6 +14,10 @@ public class Ride {
     private String driverId;
     private String pickupLocation;
     private String dropLocation;
-    private String status; // REQUESTED, ACCEPTED, COMPLETED
+    private String status; // REQUESTED, ACCEPTED, COMPLETED, CANCELLED
+
+    private Double fare;
+    private Double distanceKm;
+
     private Date createdAt = new Date();
 }
